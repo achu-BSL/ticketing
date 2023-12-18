@@ -5,7 +5,7 @@ WORKDIR /app
 RUN npm i -g pnpm
 
 COPY package.json .
-RUN pnpm install --omit=dev
+RUN pnpm install --prod
 COPY . .
 
 CMD ["pnpm", "start"]
